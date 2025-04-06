@@ -75,5 +75,8 @@
     "titleBar.inactiveBackground": "#2c2c2c99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#2c2c2c"
+  "peacock.color": "#2c2c2c",
+  "files.associations": {
+    "stdio.h": "c"
+  }
 }
