@@ -22,6 +22,6 @@ void main(){
 		n2 = temp;
 	}
 	
-	printf("Maior valor: %d", n3);
+	printf("Ordem decrescente: %d | %d | %d", n3, n2, n1);
 	
 }

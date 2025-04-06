@@ -22,6 +22,6 @@ void main(){
 		n2 = temp;
 	}
 	
-	printf("Maior valor: %d", n3);
+	printf("Menor valor: %d", n1);
 	
 }
