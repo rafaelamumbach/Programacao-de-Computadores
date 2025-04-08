@@ -55,8 +55,8 @@ int main(){
     maior2 = a2;
 
     if ((menor1<menor2) && (meio1<meio2) && (maior1<maior2)) {
-        printf("Eh possivel colocar a primeira caixa dentro da segunda.");
+        printf("Eh possivel colocar a primeira caixa dentro da segunda");
     } else {
-        printf("NAO eh possivel colocar a primeira caixa dentro da segunda.");
+        printf("NAO eh possivel colocar a primeira caixa dentro da segunda");
     }
 }
