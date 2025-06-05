@@ -1,6 +1,6 @@
 /*****************************************************************************/
-/*     Programa .....: v04.c                                                 */
-/*     Data .........: 28/05/25                                              */
+/*     Programa .....: v09.c                                                 */
+/*     Data .........: 04/06/2025                                            */
 /*     Linguagem ....: C                                                     */
 /*     Disciplina ...: Programacao de Computadores                           */
 /*     Branch .......: Vetores                                               */
@@ -12,17 +12,18 @@
 #include <stdio.h>
 
 int main(){
-    int v[10], i;
-    for(i=0;i<10;i++){
-        printf("%d/10 valores: ", i+1);
-        scanf("%d", &v[i]);
+    int v[5];
+    int i, j, maior;
+
+    for (i=0; i<5; i++) {
+        scanf("%d",&v[i]);
     }
     
-    printf("Posicoes onde ha um valor menor que zero: [ ");
-    for(i=0;i<10;i++){
-        if(v[i] < 0){
-            printf("%d ", i);
+    maior=0;
+    for (i=0; i<5; i++){
+        if(v[i]> maior){
+            maior = v[i];
         }
     }
-    printf("]");
+    printf("%d >> maior!", maior);
 }

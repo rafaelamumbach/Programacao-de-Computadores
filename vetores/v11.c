@@ -1,6 +1,6 @@
 /*****************************************************************************/
-/*     Programa .....: v04.c                                                 */
-/*     Data .........: 28/05/25                                              */
+/*     Programa .....: v11.c                                                 */
+/*     Data .........: 04/06/2025                                            */
 /*     Linguagem ....: C                                                     */
 /*     Disciplina ...: Programacao de Computadores                           */
 /*     Branch .......: Vetores                                               */
@@ -12,17 +12,20 @@
 #include <stdio.h>
 
 int main(){
-    int v[10], i;
-    for(i=0;i<10;i++){
-        printf("%d/10 valores: ", i+1);
-        scanf("%d", &v[i]);
+    int i;
+    float v[5];
+    float media=0, soma=0;
+    
+    for (i=0; i<5; i++) {
+        scanf("%f",&v[i]);
+        soma += v[i];
     }
     
-    printf("Posicoes onde ha um valor menor que zero: [ ");
-    for(i=0;i<10;i++){
-        if(v[i] < 0){
-            printf("%d ", i);
+    media = soma/5;
+    printf("Media: %.1f\n", media);
+    for (i=0; i<5; i++) {
+        if(v[i] > media){
+            printf("%.0f eh maior que a media.\n", v[i]);
         }
     }
-    printf("]");
 }
