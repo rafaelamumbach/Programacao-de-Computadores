@@ -1,6 +1,6 @@
 /*****************************************************************************/
-/*     Programa .....: v01.c                                                 */
-/*     Data .........: 19/06/2025                                            */
+/*     Programa .....: v04.c                                                 */
+/*     Data .........: 26/06/2025                                            */
 /*     Linguagem ....: C                                                     */
 /*     Disciplina ...: Programacao de Computadores                           */
 /*     Branch .......: Vetores                                               */
@@ -12,26 +12,24 @@
 #include <stdio.h>
 
 int main(){
-    int v[3], i, j, cont, n, rep_maior;
-    for(i=0;i<3;i++){
-        printf("Informe %d/3: ",i);
-        scanf("%d", &v[i]);
+    int cont[10]; //intervalo entre 1 a 10
+    int i, num;
+
+    for(i=0;i<10;i++){
+        cont[i] = 0; //zerando o vetor de contador
     }
+
+    do{
+        printf("Informe um nro: ");
+        scanf("%d", &num);
+        
+        if((num>=1)&&(num<=10)){
+            cont[num]++; //cont[posicao]++. conta qtas vezes ocorreu em x posicao q eh determinada por num.
+        }
+    } while (num >= 0);
     
-    rep_maior=0;
-    for(i=0;i<3;i++){
-        cont=0; 
-        for(j=0;j<3;j++){
-            if(v[i]==v[j]){
-                cont++;
-            }
-        }
-        if(cont > rep_maior){
-            rep_maior = cont;
-            n = v[i];
-        }
+    for(i=0;i<10;i++){
+        printf("%d: %d ocorrencia(s)\n", i, cont[i]);
     }
-    
-    printf("O numero %d repetiu %d vezes. ", n, rep_maior);
-    
+
 }
